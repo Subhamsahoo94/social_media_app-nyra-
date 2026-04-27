@@ -28,6 +28,10 @@ app.use("/api/story",storyRouter)
 app.use("/api/message",messageRouter)
 
 
+app.get("/", (req, res) => {
+  res.json({ message: "Get route healthy" });
+});
+
 server.listen(port , ()=>{
     connectDb()
     console.log("server started")
